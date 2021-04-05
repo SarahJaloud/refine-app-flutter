@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:refineapp/Screens/Login/login_screen.dart';
+import 'package:refineapp/Screens/SignUp/sign_up_screen.dart';
 import 'package:refineapp/components/rounded_button.dart';
 
 import '../../../constants.dart';
@@ -15,7 +17,7 @@ class Body extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.center,
       children: <Widget>[
         SizedBox(height: size.height * 0.07),
-        Positioned(child: Image.asset("assets/images/11070-ai.png")),
+        Positioned(child: Image.asset("assets/images/welcomesc.png")),
         SizedBox(height: size.height * 0.02),
         Positioned(
             child: Text(
@@ -26,13 +28,28 @@ class Body extends StatelessWidget {
         SizedBox(height: size.height * 0.1),
         RoundedButton(
           text: "LOGIN",
-          press: () {},
+          press: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) {
+                  return LoginScreen();
+                },
+              ),
+            );
+          },
         ),
         RoundedButton(
           text: "SIGN UP",
           color: Colors.white,
           textColor: kPrimaryColor,
-          press: () {},
+          press: () {
+            Navigator.push(context, MaterialPageRoute(
+              builder: (context) {
+                return SignUpScreen();
+              },
+            ));
+          },
         ),
       ],
     ));
