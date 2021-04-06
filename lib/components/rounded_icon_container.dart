@@ -3,11 +3,11 @@ import 'package:flutter_svg/flutter_svg.dart';
 
 import '../constants.dart';
 
-class ReminderContainer extends StatelessWidget {
+class RoundedContainerWicon extends StatelessWidget {
   final String text, icon;
   final Function press;
   final Color color, textColor;
-  const ReminderContainer({
+  const RoundedContainerWicon({
     Key key,
     @required this.icon,
     this.text,
@@ -33,7 +33,7 @@ class ReminderContainer extends StatelessWidget {
               children: <Widget>[
                 SvgPicture.asset(
                   icon,
-                  color: kPrimaryLightColor,
+                  color: yellowColor,
                   width: 33,
                 ),
                 SizedBox(width: size.width * 0.03),

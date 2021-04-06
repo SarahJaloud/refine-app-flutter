@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:refineapp/Screens/StudyBook/components/body.dart';
+import 'package:refineapp/Screens/Beginner/components/body.dart';
 import 'package:refineapp/components/costum_bottom_nav_bar.dart';
 
 import '../../constants.dart';
 import '../../enums.dart';
 
-class StudyBookScreen extends StatelessWidget {
+class BeginnerScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -18,7 +18,7 @@ class StudyBookScreen extends StatelessWidget {
                 bottomLeft: Radius.circular(40),
                 bottomRight: Radius.circular(40))),
         title: Text(
-          'Study Book',
+          'Beginner',
           style: TextStyle(
             fontSize: 26,
           ),

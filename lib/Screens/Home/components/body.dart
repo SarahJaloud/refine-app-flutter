@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:refineapp/Screens/Home/components/header.dart';
 //import 'package:refineapp/components/empty_container.dart';
-import 'package:refineapp/components/reminder_container.dart';
+import 'package:refineapp/components/rounded_icon_container.dart';
 import 'package:refineapp/constants.dart';
 
 class Body extends StatelessWidget {
@@ -19,9 +19,9 @@ class Body extends StatelessWidget {
             text: "Feeling stressed?\nLet us help you boost your confidence!",
             press: () {},
           ),
-          ReminderContainer(
+          RoundedContainerWicon(
             icon: "assets/icons/bell.svg",
-            color: yellowColor,
+            color: Colors.white,
             text: "Reminder! You did not add a new word into your notebook.",
             textColor: kPrimaryColor,
             press: () {},
