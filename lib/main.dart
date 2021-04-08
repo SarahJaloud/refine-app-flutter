@@ -2,10 +2,13 @@ import 'package:flutter/material.dart';
 //import 'package:refineapp/Screens/Home/home_screen.dart';
 //import 'package:refineapp/Screens/Welcome/Welcome_screen.dart';
 import 'package:refineapp/constants.dart';
-
 import 'Screens/AccountInfo/AccountInfo.dart';
+import 'package:firebase_core/firebase_core.dart';
 
-void main() => runApp(MyApp());
+void main() async {
+  await Firebase.initializeApp();
+  runApp(MyApp());
+}
 
 class MyApp extends StatelessWidget {
   @override
