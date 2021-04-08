@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "823005604039",
+    "project_id": "refine-e6851",
+    "storage_bucket": "refine-e6851.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:823005604039:android:329e57fe5c4158a655b6e2",
+        "android_client_info": {
+          "package_name": "com.sproject.refineapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "823005604039-gnrt65hc6a4d5tl0vc059dl5jd70td49.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD3LsF_K8dAGn9BNPi5ITgT71nEvkHQvfk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "823005604039-gnrt65hc6a4d5tl0vc059dl5jd70td49.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

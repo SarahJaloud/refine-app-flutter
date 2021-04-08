@@ -18,8 +18,9 @@ class CircularButton extends StatelessWidget {
     //Size size = MediaQuery.of(context).size;
     return Row(
       children: [
-        MaterialButton(
-          onPressed: () {},
+        // ignore: deprecated_member_use
+        FlatButton(
+          onPressed: press,
           color: kPrimaryColor,
           child: SvgPicture.asset(icon, width: 53, color: yellowColor),
           padding: EdgeInsets.all(23),

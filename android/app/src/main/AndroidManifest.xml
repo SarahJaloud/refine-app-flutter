@@ -1,5 +1,5 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.refineapp">
+    package="com.sproject.refineapp">
    <application
         android:label="refineapp"
         android:icon="@mipmap/ic_launcher">

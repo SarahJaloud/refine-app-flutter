@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:refineapp/Screens/Beginner/components/lessons_menu.dart';
+import 'package:refineapp/Screens/Beginner/Vocabulary/vocabulary_screen.dart';
+import 'package:refineapp/Screens/Beginner/components/circular_button.dart';
+//import 'package:refineapp/Screens/Home/home_screen.dart';
 import 'package:refineapp/components/rounded_button.dart';
 import 'package:refineapp/constants.dart';
 
@@ -18,7 +20,11 @@ class Body extends StatelessWidget {
             CircularButton(
                 icon: "assets/icons/dictionary.svg",
                 text: "Vocabulary",
-                press: () {}),
+                press: () {
+                  Navigator.push(context, MaterialPageRoute(builder: (context) {
+                    return VocabularyScreenB();
+                  }));
+                }),
             SizedBox(height: size.height * 0.02),
             Column(
               children: [
