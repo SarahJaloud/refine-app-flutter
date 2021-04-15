@@ -1,5 +1,5 @@
 import 'package:flutter/cupertino.dart';
-import 'package:refineapp/constants.dart';
+import 'package:refineapp/shared/constants.dart';
 
 class EmptyContainer extends StatelessWidget {
   final String text;

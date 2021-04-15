@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:refineapp/Screens/Home/components/header.dart';
 //import 'package:refineapp/components/empty_container.dart';
 import 'package:refineapp/components/rounded_icon_container.dart';
-import 'package:refineapp/constants.dart';
+import 'package:refineapp/shared/constants.dart';
 
 class Body extends StatelessWidget {
   @override

@@ -3,7 +3,7 @@ import 'package:refineapp/Screens/Beginner/Vocabulary/vocabulary_screen.dart';
 import 'package:refineapp/Screens/Beginner/components/circular_button.dart';
 //import 'package:refineapp/Screens/Home/home_screen.dart';
 import 'package:refineapp/components/rounded_button.dart';
-import 'package:refineapp/constants.dart';
+import 'package:refineapp/shared/constants.dart';
 
 class Body extends StatelessWidget {
   @override

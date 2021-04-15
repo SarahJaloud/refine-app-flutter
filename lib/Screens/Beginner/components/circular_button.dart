@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:refineapp/constants.dart';
+import 'package:refineapp/shared/constants.dart';
 
 class CircularButton extends StatelessWidget {
   const CircularButton({

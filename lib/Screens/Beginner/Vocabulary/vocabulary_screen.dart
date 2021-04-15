@@ -3,7 +3,7 @@ import 'package:refineapp/Screens/Beginner/Vocabulary/components/body.dart';
 import 'package:refineapp/Screens/Beginner/beginner_screen.dart';
 //import 'package:flutter_svg/flutter_svg.dart';
 
-import '../../../constants.dart';
+import '../../../shared/constants.dart';
 
 class VocabularyScreenB extends StatelessWidget {
   @override

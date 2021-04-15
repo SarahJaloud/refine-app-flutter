@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:refineapp/Screens/Home/components/body.dart';
 import 'package:refineapp/components/costum_bottom_nav_bar.dart';
-import 'package:refineapp/constants.dart';
+import 'package:refineapp/shared/constants.dart';
 
 import '../../enums.dart';
 

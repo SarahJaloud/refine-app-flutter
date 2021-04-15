@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:refineapp/Screens/AccountInfo/components/gender.dart';
+//import 'package:refineapp/Screens/AccountInfo/components/gender.dart';
 import 'package:refineapp/components/rounded_button.dart';
 import 'package:refineapp/components/rounded_input_field.dart';
-import 'package:refineapp/constants.dart';
+import 'package:refineapp/shared/constants.dart';
 
 class Body extends StatelessWidget {
   @override
@@ -39,7 +39,7 @@ class Body extends StatelessWidget {
               onChanged: (value) {},
             ),
             SizedBox(height: size.height * 0.01),
-            new Row(
+            /*new Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Gender(
@@ -51,7 +51,7 @@ class Body extends StatelessWidget {
                   press: () {},
                 ),
               ],
-            ),
+            ), */
             SizedBox(height: size.height * 0.01),
             RoundedButton(
               color: Colors.white,

@@ -1,5 +1,5 @@
-import 'package:flutter/material.dart';
-
+//import 'package:flutter/material.dart';
+/*
 class SizeConfig {
   static MediaQueryData _mediaQueryData;
   static double screenWidth;
@@ -28,3 +28,4 @@ double getProportionateScreenWidth(double inputWidth) {
   // 375 is the layout width that designer use
   return (inputWidth / 375.0) * screenWidth;
 }
+*/

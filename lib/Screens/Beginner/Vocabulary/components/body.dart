@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 //import 'package:flutter_svg/flutter_svg.dart';
 //import 'package:refineapp/Screens/Beginner/Vocabulary/components/vocab_list.dart';
-import 'package:refineapp/constants.dart';
+import 'package:refineapp/shared/constants.dart';
 
 class Body extends StatelessWidget {
   @override

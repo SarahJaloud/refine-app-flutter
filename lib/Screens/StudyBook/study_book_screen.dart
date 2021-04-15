@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:refineapp/Screens/StudyBook/components/body.dart';
 import 'package:refineapp/components/costum_bottom_nav_bar.dart';
 
-import '../../constants.dart';
+import '../../shared/constants.dart';
 import '../../enums.dart';
 
 class StudyBookScreen extends StatelessWidget {

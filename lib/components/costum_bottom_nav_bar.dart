@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:refineapp/Screens/Home/home_screen.dart';
 import 'package:refineapp/Screens/StudyBook/study_book_screen.dart';
-import 'package:refineapp/constants.dart';
+import 'package:refineapp/shared/constants.dart';
 import 'package:refineapp/enums.dart';
 
 class CostumBottomNavBar extends StatelessWidget {

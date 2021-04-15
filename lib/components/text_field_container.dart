@@ -1,14 +1,19 @@
 import 'package:flutter/material.dart';
 
-import '../constants.dart';
+import '../shared/constants.dart';
 
-class TextFeildContainer extends StatelessWidget {
+class TextFeildContainer extends StatefulWidget {
   final Widget child;
   const TextFeildContainer({
     Key key,
     this.child,
   }) : super(key: key);
 
+  @override
+  _TextFeildContainerState createState() => _TextFeildContainerState();
+}
+
+class _TextFeildContainerState extends State<TextFeildContainer> {
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
@@ -20,7 +25,7 @@ class TextFeildContainer extends StatelessWidget {
         color: kPrimaryColor,
         borderRadius: BorderRadius.circular(25),
       ),
-      child: child,
+      child: widget.child,
     );
   }
 }
