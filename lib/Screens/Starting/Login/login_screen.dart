@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:refineapp/Screens/SignUp/sign_up_screen.dart';
+import 'package:refineapp/Screens/Starting/SignUp/sign_up_screen.dart';
+import 'package:refineapp/Screens/Starting/reset/password_reset.dart';
 import 'package:refineapp/components/already_have_an_account_check.dart';
 import 'package:refineapp/components/rounded_button.dart';
 import 'package:refineapp/components/text_field_container.dart';
@@ -7,6 +8,10 @@ import '../../../shared/constants.dart';
 import 'package:refineapp/services/auth.dart';
 
 class LoginScreen extends StatefulWidget {
+  final Function myToggle;
+
+  static String routeName = "/login";
+  LoginScreen({this.myToggle});
   @override
   _LoginScreenState createState() => _LoginScreenState();
 }
@@ -38,7 +43,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 height: 250,
                 width: 250,
               ),
-              SizedBox(height: size.height * 0.03),
+              SizedBox(height: size.height * 0.02),
               Text(
                 "LOG IN",
                 style: TextStyle(
@@ -46,11 +51,12 @@ class _LoginScreenState extends State<LoginScreen> {
                     fontWeight: FontWeight.bold,
                     color: Colors.white),
               ),
-              SizedBox(height: size.height * 0.01),
+              SizedBox(height: size.height * 0.04),
               //--------------------------------
               TextFeildContainer(
                   child: TextFormField(
                 decoration: InputDecoration(
+                  hintText: "Email address",
                   prefixIcon: Icon(
                     Icons.email,
                     color: yellowColor,
@@ -66,6 +72,7 @@ class _LoginScreenState extends State<LoginScreen> {
               TextFeildContainer(
                 child: (TextFormField(
                   decoration: InputDecoration(
+                    hintText: "Password",
                     prefixIcon: Icon(
                       Icons.lock_rounded,
                       color: yellowColor,
@@ -80,6 +87,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   },
                 )),
               ),
+              SizedBox(height: size.height * 0.01),
               //--------------------------------
               RoundedButton(
                   color: Colors.white,
@@ -102,6 +110,31 @@ class _LoginScreenState extends State<LoginScreen> {
                   return SignUpScreen();
                 }));
               }),
+              Padding(
+                padding: EdgeInsets.symmetric(horizontal: 50.0, vertical: 4),
+                child: Container(
+                  height: 1.5,
+                  width: 200.0,
+                  color: kPrimaryColor,
+                ),
+              ),
+              GestureDetector(
+                onTap: () {
+                  Navigator.of(context)
+                      .push(MaterialPageRoute(builder: (context) {
+                    return PassResetScreen();
+                  }));
+                },
+                child: Text(
+                  "Forgot password?",
+                  style: TextStyle(
+                    color: yellowColor,
+                    fontSize: 14,
+                    fontWeight: FontWeight.bold,
+                  ),
+                  textAlign: TextAlign.left,
+                ),
+              ),
               Text(
                 error,
                 style: TextStyle(color: Colors.red, fontSize: 14.0),

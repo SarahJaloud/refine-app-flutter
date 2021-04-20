@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:refineapp/Screens/Login/login_screen.dart';
-import 'package:refineapp/Screens/SignUp/sign_up_screen.dart';
+import 'package:refineapp/Screens/Starting/Login/login_screen.dart';
+import 'package:refineapp/Screens/Starting/SignUp/sign_up_screen.dart';
 import 'package:refineapp/components/rounded_button.dart';
-
-import '../../../shared/constants.dart';
+import 'package:refineapp/shared/constants.dart';
 
 //import 'package:flutter_svg/flutter_svg.dart';
 

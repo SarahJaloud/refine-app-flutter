@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:refineapp/Screens/Beginner/Vocabulary/components/body.dart';
-import 'package:refineapp/Screens/Beginner/beginner_screen.dart';
+import 'package:refineapp/Screens/StudyBook/Beginner/Vocabulary/components/body.dart';
+import 'package:refineapp/Screens/StudyBook/Beginner/beginner_screen.dart';
+import 'package:refineapp/shared/constants.dart';
 //import 'package:flutter_svg/flutter_svg.dart';
-
-import '../../../shared/constants.dart';
 
 class VocabularyScreenB extends StatelessWidget {
   @override

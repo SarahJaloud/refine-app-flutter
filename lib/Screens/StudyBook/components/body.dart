@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:refineapp/Screens/Beginner/beginner_screen.dart';
+import 'package:refineapp/Screens/StudyBook/Beginner/beginner_screen.dart';
 import 'package:refineapp/Screens/StudyBook/components/levels_menu.dart';
 
 class Body extends StatelessWidget {

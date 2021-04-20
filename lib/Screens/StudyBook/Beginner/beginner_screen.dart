@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:refineapp/Screens/Beginner/components/body.dart';
+import 'package:refineapp/Screens/StudyBook/Beginner/components/body.dart';
 import 'package:refineapp/components/costum_bottom_nav_bar.dart';
+import 'package:refineapp/shared/constants.dart';
 
-import '../../shared/constants.dart';
-import '../../enums.dart';
+import 'package:refineapp/enums.dart';
 
 class BeginnerScreen extends StatelessWidget {
   @override

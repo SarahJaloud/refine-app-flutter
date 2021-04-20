@@ -1,7 +1,7 @@
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:refineapp/Screens/EnglishQuiz/Welcome/welcome_quiz.dart';
+import 'package:refineapp/Screens/Starting/Welcome/Welcome_screen.dart';
 import 'package:refineapp/model/user.dart';
-//import 'package:refineapp/services/database.dart';
-//import 'package:refineapp/services/database.dart';
 
 class AuthService {
   // _auth to interact with FirebaseAuth
@@ -36,7 +36,7 @@ class AuthService {
   // when we call this function from different widgets its going to take email+password
   // and try to create the user with them
   Future signUpWithEmailAndPassword(
-      String _userEmail, String _userPassword) async {
+      String _userEmail, String _userPassword, String _name) async {
     try {
       UserCredential result = await _auth.createUserWithEmailAndPassword(
           email: _userEmail, password: _userPassword);
@@ -46,7 +46,27 @@ class AuthService {
       return _fromFirebaseUser(user);
     } catch (error) {
       print(error.toString());
-      return null;
+      return WelcomeQuiz();
     }
   }
+
+  // sign out
+  Future signOut() async {
+    try {
+      return await _auth.signOut();
+    } catch (error) {
+      print(error.toString());
+      return WelcomeScreen();
+    }
+  }
+
+  // Reset Password
+  Future sendPasswordResetEmail(String _userEmail) async {
+    return _auth.sendPasswordResetEmail(email: _userEmail);
+  }
+
+  //forgot password
+  /*Future resetPassword(String _userEmail) async {
+    await _auth.sendPasswordResetEmail(email: _userEmail);
+  } */
 }

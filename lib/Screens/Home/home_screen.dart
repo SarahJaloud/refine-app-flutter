@@ -6,6 +6,7 @@ import 'package:refineapp/shared/constants.dart';
 import '../../enums.dart';
 
 class HomeScreen extends StatelessWidget {
+  static String routeName = "/home";
   @override
   Widget build(BuildContext context) {
     return Scaffold(

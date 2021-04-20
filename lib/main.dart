@@ -1,19 +1,41 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:refineapp/Screens/Welcome/Welcome_screen.dart';
-//import 'package:refineapp/Screens/Home/home_screen.dart';
-//import 'package:refineapp/Screens/wrapper.dart';
+import 'package:refineapp/Screens/wrapper.dart';
 import 'package:refineapp/model/user.dart';
+import 'package:refineapp/routes.dart';
 import 'package:refineapp/shared/constants.dart';
-//import 'Screens/AccountInfo/AccountInfo.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:refineapp/services/auth.dart';
+import 'package:splashscreen/splashscreen.dart';
+
 //import 'package:refineapp/shared/loading.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp();
-  runApp(MyApp());
+  runApp(new MaterialApp(
+    debugShowCheckedModeBanner: false,
+    home: new SplashScrenn(),
+  ));
+}
+
+class SplashScrenn extends StatefulWidget {
+  @override
+  _SplashScrennState createState() => _SplashScrennState();
+}
+
+class _SplashScrennState extends State<SplashScrenn> {
+  @override
+  Widget build(BuildContext context) {
+    return new SplashScreen(
+      seconds: 6,
+      navigateAfterSeconds: new MyApp(),
+      backgroundColor: kPrimaryLightColor,
+      photoSize: 100,
+      loaderColor: Colors.white,
+      image: new Image.asset("assets/images/logo.png"),
+    );
+  }
 }
 
 class MyApp extends StatelessWidget {
@@ -35,11 +57,9 @@ class MyApp extends StatelessWidget {
                         fontWeight: FontWeight.bold,
                         fontSize: 17))),
           ),
-          //home: Loading(),
-          //home: Wrapper(),
-          //home: HomeScreen()
-          //home: AccountInfo(),
-          home: WelcomeScreen(),
+          home: Wrapper(),
+          //initialRoute: WelcomeScreen.routeName,
+          routes: routes,
         ));
   }
 }

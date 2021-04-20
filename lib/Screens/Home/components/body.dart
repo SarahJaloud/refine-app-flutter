@@ -52,7 +52,7 @@ class RoundedContainer extends StatelessWidget {
       margin: EdgeInsets.symmetric(vertical: 10),
       width: size.width * 0.9,
       child: ClipRRect(
-        borderRadius: BorderRadius.circular(16),
+        borderRadius: BorderRadius.circular(20),
         // ignore: deprecated_member_use
         child: FlatButton(
             padding: EdgeInsets.symmetric(vertical: 23, horizontal: 23),

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:refineapp/Screens/Home/Profile/profile_screen.dart';
 import 'package:refineapp/shared/constants.dart';
 
 class Header extends StatelessWidget {
@@ -45,7 +46,12 @@ class Header extends StatelessWidget {
                         "assets/icons/user.svg",
                         color: Colors.white,
                       ),
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.push(context,
+                            MaterialPageRoute(builder: (context) {
+                          return ProfileScreen();
+                        }));
+                      },
                     )
                   ],
                 ))

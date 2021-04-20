@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:refineapp/Screens/Beginner/Vocabulary/vocabulary_screen.dart';
-import 'package:refineapp/Screens/Beginner/components/circular_button.dart';
+import 'package:refineapp/Screens/StudyBook/Beginner/Vocabulary/vocabulary_screen.dart';
+import 'package:refineapp/Screens/StudyBook/Beginner/components/circular_button.dart';
 //import 'package:refineapp/Screens/Home/home_screen.dart';
 import 'package:refineapp/components/rounded_button.dart';
 import 'package:refineapp/shared/constants.dart';
@@ -76,7 +76,7 @@ class Body extends StatelessWidget {
             ),
             SizedBox(height: size.height * 0.02),
             RoundedButton(
-              text: "TAKE QUIZ",
+              text: "TAKE EXERCISE",
               textColor: kPrimaryLightColor,
               color: pinkColor,
               press: () {},
