@@ -22,7 +22,7 @@ class Option extends StatelessWidget {
         init: QuestionController(),
         builder: (qnController) {
           Color getTheRightColor() {
-            if (qnController.inAnswered) {
+            if (qnController.isAnswered) {
               if (index == qnController.correctAns) {
                 return greenColor;
               } else if (index == qnController.selectedAns &&

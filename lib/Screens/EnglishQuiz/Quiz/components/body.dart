@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 
 import 'package:refineapp/Screens/EnglishQuiz/Quiz/components/progress_bar.dart';
 import 'package:refineapp/Screens/EnglishQuiz/Quiz/components/question_card.dart';
@@ -18,7 +17,7 @@ class Body extends StatelessWidget {
     QuestionController _questionController = Get.put(QuestionController());
     return Stack(
       children: [
-        SvgPicture.asset("assets/icons/Confetti-Doodles.svg", fit: BoxFit.fill),
+        Image.asset("assets/images/Confetti-Doodles.png", fit: BoxFit.fill),
         SafeArea(
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
@@ -28,7 +27,7 @@ class Body extends StatelessWidget {
                     const EdgeInsets.symmetric(horizontal: kDefaultPadding),
                 child: ProgressBar(),
               ),
-              SizedBox(height: kDefaultPadding),
+              //SizedBox(height: kDefaultPadding),
               Padding(
                 padding:
                     const EdgeInsets.symmetric(horizontal: kDefaultPadding),
@@ -39,14 +38,14 @@ class Body extends StatelessWidget {
                           "Question ${_questionController.questionNumber.value}",
                       style: Theme.of(context)
                           .textTheme
-                          .headline4
-                          .copyWith(color: kPrimaryColor),
+                          .headline5
+                          .copyWith(color: Colors.black87),
                       children: [
                         TextSpan(
                           text: "/${_questionController.questions.length}",
                           style: Theme.of(context)
                               .textTheme
-                              .headline5
+                              .headline6
                               .copyWith(color: kPrimaryColor),
                         ),
                       ],

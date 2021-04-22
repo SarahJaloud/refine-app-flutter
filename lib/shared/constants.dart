@@ -7,7 +7,7 @@ Color pinkColor = Color(0xFFF1AA9B);
 
 const greenColor = Color(0xFF008000);
 const redColor = Color(0xFFFF0000);
-const greyColor = Color(0xFFA9A9A9);
+const greyColor = Color(0xFFA0A0A0);
 
 const kPrimaryGradient = LinearGradient(
   colors: [Color(0xFFF0C38E), Color(0xFFF1AA9B)],

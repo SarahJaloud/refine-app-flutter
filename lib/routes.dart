@@ -1,4 +1,6 @@
 import 'package:flutter/widgets.dart';
+import 'package:refineapp/Screens/EnglishQuiz/Quiz/quiz_screen.dart';
+import 'package:refineapp/Screens/EnglishQuiz/Result/result_screen.dart';
 import 'package:refineapp/Screens/EnglishQuiz/Welcome/welcome_quiz.dart';
 import 'package:refineapp/Screens/Home/Profile/profile_screen.dart';
 import 'package:refineapp/Screens/Home/home_screen.dart';
@@ -15,4 +17,6 @@ final Map<String, WidgetBuilder> routes = {
   WelcomeScreen.routeName: (context) => WelcomeScreen(),
   HomeScreen.routeName: (context) => HomeScreen(),
   WelcomeQuiz.routeName: (context) => WelcomeQuiz(),
+  QuizScreen.routeName: (context) => QuizScreen(),
+  ResultScreen.routeName: (context) => ResultScreen(),
 };

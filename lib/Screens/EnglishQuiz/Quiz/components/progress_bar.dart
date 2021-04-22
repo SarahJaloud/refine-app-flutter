@@ -68,7 +68,7 @@ class ProgressBar extends StatelessWidget {
       width: double.infinity,
       height: 35,
       decoration: BoxDecoration(
-        border: Border.all(color: Color(0xFF3F4768), width: 3),
+        border: Border.all(color: kPrimaryColor, width: 3),
         borderRadius: BorderRadius.circular(50),
       ),
       child: GetBuilder<QuestionController>(
@@ -76,8 +76,8 @@ class ProgressBar extends StatelessWidget {
         builder: (controller) {
           return Stack(
             children: [
-              // LayoutBuilder provide us the available space for the conatiner
-              // constraints.maxWidth needed for our animation
+              //LayoutBuilder provide us the available space for the conatiner
+              //constraints.maxWidth needed for our animation
               LayoutBuilder(
                 builder: (context, constraints) => Container(
                   // from 0 to 1 it takes 60s
@@ -96,7 +96,11 @@ class ProgressBar extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Text("${(controller.animation.value * 60).round()} sec"),
-                      SvgPicture.asset("assets/icons/fast-time.svg"),
+                      SvgPicture.asset(
+                        "assets/icons/fast-time.svg",
+                        width: 30,
+                        color: Colors.white,
+                      ),
                     ],
                   ),
                 ),

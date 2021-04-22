@@ -8,6 +8,7 @@ import 'package:refineapp/shared/constants.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:refineapp/services/auth.dart';
 import 'package:splashscreen/splashscreen.dart';
+import 'package:get/get.dart';
 
 //import 'Screens/EnglishQuiz/Quiz/components/body.dart';
 
@@ -47,7 +48,7 @@ class MyApp extends StatelessWidget {
     return StreamProvider<UserC>.value(
         value: AuthService().user,
         initialData: null,
-        child: MaterialApp(
+        child: GetMaterialApp(
           debugShowCheckedModeBanner: false,
           title: 'Refine App',
           theme: ThemeData(

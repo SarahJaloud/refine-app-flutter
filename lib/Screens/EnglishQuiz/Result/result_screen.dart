@@ -1,35 +1,36 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
 import 'package:refineapp/controllers/question_controller.dart';
 import 'package:refineapp/shared/constants.dart';
 
 class ResultScreen extends StatelessWidget {
+  static String routeName = "/result_screen";
   @override
   Widget build(BuildContext context) {
     QuestionController _qnController = Get.put(QuestionController());
     return Scaffold(
+      backgroundColor: kPrimaryLightColor,
       body: Stack(
         fit: StackFit.expand,
         children: [
-          SvgPicture.asset("assets/icons/bg.svg", fit: BoxFit.fill),
+          Image.asset("assets/images/Confetti-Doodles.png", fit: BoxFit.fill),
           Column(
             children: [
               Spacer(flex: 3),
               Text(
-                "Score",
+                "Your score is:",
                 style: Theme.of(context)
                     .textTheme
                     .headline3
-                    .copyWith(color: pinkColor),
+                    .copyWith(color: Colors.white),
               ),
-              Spacer(),
+              //Spacer(),
               Text(
-                "${_qnController.correctAns * 10}/${_qnController.questions.length * 10}",
+                "${_qnController.numOfCorrectAns}/${_qnController.questions.length}",
                 style: Theme.of(context)
                     .textTheme
                     .headline4
-                    .copyWith(color: pinkColor),
+                    .copyWith(color: Colors.black),
               ),
               Spacer(flex: 3),
             ],
