@@ -1,12 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:refineapp/Screens/wrapper.dart';
+import 'package:refineapp/Screens/EnglishQuiz/Quiz/quiz_screen.dart';
+//import 'package:refineapp/Screens/wrapper.dart';
 import 'package:refineapp/model/user.dart';
 import 'package:refineapp/routes.dart';
 import 'package:refineapp/shared/constants.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:refineapp/services/auth.dart';
 import 'package:splashscreen/splashscreen.dart';
+
+//import 'Screens/EnglishQuiz/Quiz/components/body.dart';
 
 //import 'package:refineapp/shared/loading.dart';
 
@@ -28,7 +31,7 @@ class _SplashScrennState extends State<SplashScrenn> {
   @override
   Widget build(BuildContext context) {
     return new SplashScreen(
-      seconds: 6,
+      seconds: 3,
       navigateAfterSeconds: new MyApp(),
       backgroundColor: kPrimaryLightColor,
       photoSize: 100,
@@ -48,7 +51,7 @@ class MyApp extends StatelessWidget {
           debugShowCheckedModeBanner: false,
           title: 'Refine App',
           theme: ThemeData(
-            scaffoldBackgroundColor: kPrimaryLightColor,
+            backgroundColor: kPrimaryLightColor,
             fontFamily: "muli",
             appBarTheme: AppBarTheme(
                 textTheme: TextTheme(
@@ -57,7 +60,7 @@ class MyApp extends StatelessWidget {
                         fontWeight: FontWeight.bold,
                         fontSize: 17))),
           ),
-          home: Wrapper(),
+          home: QuizScreen(),
           //initialRoute: WelcomeScreen.routeName,
           routes: routes,
         ));
