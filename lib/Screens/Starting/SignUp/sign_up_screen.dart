@@ -62,6 +62,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                     //--------------------------------
                     TextFeildContainer(
                         child: TextFormField(
+                      style: TextStyle(color: Colors.white),
                       decoration: InputDecoration(
                         hintText: "Your name",
                         prefixIcon: Icon(
@@ -79,6 +80,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
 
                     TextFeildContainer(
                         child: TextFormField(
+                      style: TextStyle(color: Colors.white),
                       decoration: InputDecoration(
                         hintText: "Email address",
                         prefixIcon: Icon(
@@ -96,6 +98,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                     //--------------------------------
                     TextFeildContainer(
                       child: (TextFormField(
+                        style: TextStyle(color: Colors.white),
                         decoration: InputDecoration(
                           hintText: "Password",
                           prefixIcon: Icon(
@@ -127,7 +130,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                             dynamic result =
                                 await _auth.signUpWithEmailAndPassword(
                                     _userEmail, _userPassword, _name);
-                            if (result == null) {
+                            if (result == null && this.mounted) {
                               setState(() {
                                 error = 'Please enter a valid email';
                               });

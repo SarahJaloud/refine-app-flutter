@@ -16,7 +16,7 @@ class Body extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: <Widget>[
-            //SizedBox(height: size.height * 0.02),
+            SizedBox(height: size.height * 0.07),
             CircularButton(
                 icon: "assets/icons/dictionary.svg",
                 text: "Vocabulary",
@@ -25,7 +25,7 @@ class Body extends StatelessWidget {
                     return VocabularyScreenB();
                   }));
                 }),
-            SizedBox(height: size.height * 0.02),
+            SizedBox(height: size.height * 0.05),
             Column(
               children: [
                 Padding(
@@ -38,12 +38,12 @@ class Body extends StatelessWidget {
                 ),
               ],
             ),
-            SizedBox(height: size.height * 0.02),
+            SizedBox(height: size.height * 0.05),
             CircularButton(
                 icon: "assets/icons/grammar.svg",
                 text: "Grammar",
                 press: () {}),
-            SizedBox(height: size.height * 0.02),
+            SizedBox(height: size.height * 0.05),
             Column(
               children: [
                 Padding(
@@ -57,23 +57,6 @@ class Body extends StatelessWidget {
               ],
             ),
             SizedBox(height: size.height * 0.02),
-            CircularButton(
-                icon: "assets/icons/communication.svg",
-                text: "listening and comprehending",
-                press: () {}),
-            SizedBox(height: size.height * 0.02),
-            Column(
-              children: [
-                Padding(
-                  padding: EdgeInsets.symmetric(horizontal: 50.0),
-                  child: Container(
-                    height: 1.0,
-                    width: 200.0,
-                    color: kPrimaryColor,
-                  ),
-                ),
-              ],
-            ),
             SizedBox(height: size.height * 0.02),
             RoundedButton(
               text: "TAKE EXERCISE",

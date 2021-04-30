@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import 'package:refineapp/Screens/EnglishQuiz/Quiz/components/progress_bar.dart';
-import 'package:refineapp/Screens/EnglishQuiz/Quiz/components/question_card.dart';
+import 'package:refineapp/Screens/Starting/EnglishQuiz/Quiz/components/progress_bar.dart';
+import 'package:refineapp/Screens/Starting/EnglishQuiz/Quiz/components/question_card.dart';
 import 'package:refineapp/controllers/question_controller.dart';
 import 'package:refineapp/shared/constants.dart';
 
@@ -13,7 +13,7 @@ class Body extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // So that we have acccess our controller
+    // accessing my controller
     QuestionController _questionController = Get.put(QuestionController());
     return Stack(
       children: [

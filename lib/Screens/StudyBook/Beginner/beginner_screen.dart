@@ -5,12 +5,18 @@ import 'package:refineapp/shared/constants.dart';
 
 import 'package:refineapp/enums.dart';
 
-class BeginnerScreen extends StatelessWidget {
+class BeginnerScreen extends StatefulWidget {
+  @override
+  _BeginnerScreenState createState() => _BeginnerScreenState();
+}
+
+class _BeginnerScreenState extends State<BeginnerScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: kPrimaryLightColor,
       appBar: AppBar(
-        toolbarHeight: 90,
+        toolbarHeight: 80,
         backgroundColor: kPrimaryColor,
         elevation: 0,
         shape: ContinuousRectangleBorder(

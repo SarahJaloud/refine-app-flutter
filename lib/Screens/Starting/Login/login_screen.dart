@@ -94,6 +94,8 @@ class _LoginScreenState extends State<LoginScreen> {
                   textColor: kPrimaryColor,
                   text: "LOG IN",
                   press: () async {
+                    Navigator.of(context).pop();
+                    Navigator.of(context).pushReplacementNamed('/home');
                     if (_formKey.currentState.validate()) {
                       dynamic result = await _auth.logInWithEmailAndPassword(
                           _userEmail, _userPassword);

@@ -17,7 +17,7 @@ class CostumBottomNavBar extends StatelessWidget {
   Widget build(BuildContext context) {
     final Color inActiveIconColor = kPrimaryLightColor;
     return Container(
-        padding: EdgeInsets.symmetric(vertical: 18),
+        padding: EdgeInsets.symmetric(vertical: 13),
         decoration: BoxDecoration(
             color: kPrimaryColor,
             borderRadius: BorderRadius.only(

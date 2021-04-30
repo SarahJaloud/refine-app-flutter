@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:refineapp/Screens/Home/home_screen.dart';
+import 'package:refineapp/components/rounded_button.dart';
 import 'package:refineapp/controllers/question_controller.dart';
 import 'package:refineapp/shared/constants.dart';
 
@@ -33,6 +35,25 @@ class ResultScreen extends StatelessWidget {
                     .copyWith(color: Colors.black),
               ),
               Spacer(flex: 3),
+              Text(
+                "${_qnController.decidedLevel}",
+                style: Theme.of(context)
+                    .textTheme
+                    .headline5
+                    .copyWith(color: Colors.white),
+              ),
+              RoundedButton(
+                color: kPrimaryColor,
+                text: "GET STARTED",
+                press: () {
+                  Navigator.push(context, MaterialPageRoute(builder: (context) {
+                    return HomeScreen();
+                  }));
+                },
+              ),
+              SizedBox(
+                height: 30,
+              )
             ],
           )
         ],
@@ -40,3 +61,5 @@ class ResultScreen extends StatelessWidget {
     );
   }
 }
+
+class Decide {}

@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:refineapp/Screens/Starting/EnglishQuiz/Quiz/quiz_screen.dart';
 import 'package:refineapp/components/rounded_button.dart';
 import 'package:refineapp/shared/constants.dart';
 import 'package:firebase_auth/firebase_auth.dart';
@@ -40,7 +42,7 @@ class _WelcomeQuizState extends State<WelcomeQuiz> {
               children: [
                 Image.asset("assets/images/hello.png"),
                 Text(
-                  "Hello ${userr.displayName}!",
+                  "Hello!",
                   style: TextStyle(
                       fontSize: 26,
                       color: Colors.white,
@@ -57,7 +59,9 @@ class _WelcomeQuizState extends State<WelcomeQuiz> {
                   text: "TAKE QUIZ",
                   textColor: kPrimaryLightColor,
                   color: pinkColor,
-                  press: () {},
+                  press: () {
+                    Get.to(QuizScreen());
+                  },
                 )
               ],
             )));

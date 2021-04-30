@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:refineapp/Screens/EnglishQuiz/Quiz/quiz_screen.dart';
-//import 'package:refineapp/Screens/wrapper.dart';
+import 'package:refineapp/Screens/wrapper.dart';
 import 'package:refineapp/model/user.dart';
 import 'package:refineapp/routes.dart';
 import 'package:refineapp/shared/constants.dart';
@@ -9,10 +8,6 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:refineapp/services/auth.dart';
 import 'package:splashscreen/splashscreen.dart';
 import 'package:get/get.dart';
-
-//import 'Screens/EnglishQuiz/Quiz/components/body.dart';
-
-//import 'package:refineapp/shared/loading.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -61,7 +56,8 @@ class MyApp extends StatelessWidget {
                         fontWeight: FontWeight.bold,
                         fontSize: 17))),
           ),
-          home: QuizScreen(),
+          home: Wrapper(),
+
           //initialRoute: WelcomeScreen.routeName,
           routes: routes,
         ));

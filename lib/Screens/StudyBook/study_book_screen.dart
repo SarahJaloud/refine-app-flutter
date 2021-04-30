@@ -9,8 +9,9 @@ class StudyBookScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: kPrimaryLightColor,
       appBar: AppBar(
-        toolbarHeight: 90,
+        toolbarHeight: 80,
         backgroundColor: kPrimaryColor,
         elevation: 0,
         shape: ContinuousRectangleBorder(

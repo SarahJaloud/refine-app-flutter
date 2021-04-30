@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:refineapp/Screens/Home/Motivation/motivation.dart';
 import 'package:refineapp/Screens/Home/components/header.dart';
 //import 'package:refineapp/components/empty_container.dart';
 import 'package:refineapp/components/rounded_icon_container.dart';
@@ -17,12 +18,16 @@ class Body extends StatelessWidget {
           Header(size: size),
           RoundedContainer(
             text: "Feeling stressed?\nLet us help you boost your confidence!",
-            press: () {},
+            press: () {
+              Navigator.push(context, MaterialPageRoute(builder: (context) {
+                return MotivationScreen();
+              }));
+            },
           ),
           RoundedContainerWicon(
             icon: "assets/icons/bell.svg",
             color: Colors.white,
-            text: "Reminder! You did not add a new word into your notebook.",
+            text: "Reminder! You should add a new word into your notebook.",
             textColor: kPrimaryColor,
             press: () {},
           )

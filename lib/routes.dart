@@ -1,7 +1,7 @@
 import 'package:flutter/widgets.dart';
-import 'package:refineapp/Screens/EnglishQuiz/Quiz/quiz_screen.dart';
-import 'package:refineapp/Screens/EnglishQuiz/Result/result_screen.dart';
-import 'package:refineapp/Screens/EnglishQuiz/Welcome/welcome_quiz.dart';
+import 'package:refineapp/Screens/Starting/EnglishQuiz/Quiz/quiz_screen.dart';
+import 'package:refineapp/Screens/Starting/EnglishQuiz/Result/result_screen.dart';
+import 'package:refineapp/Screens/Starting/EnglishQuiz/Welcome/welcome_quiz.dart';
 import 'package:refineapp/Screens/Home/Profile/profile_screen.dart';
 import 'package:refineapp/Screens/Home/home_screen.dart';
 import 'package:refineapp/Screens/Starting/Login/login_screen.dart';
