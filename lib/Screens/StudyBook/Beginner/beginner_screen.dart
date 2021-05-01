@@ -16,6 +16,7 @@ class _BeginnerScreenState extends State<BeginnerScreen> {
     return Scaffold(
       backgroundColor: kPrimaryLightColor,
       appBar: AppBar(
+        automaticallyImplyLeading: false,
         toolbarHeight: 80,
         backgroundColor: kPrimaryColor,
         elevation: 0,

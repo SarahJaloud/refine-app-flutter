@@ -11,6 +11,7 @@ class StudyBookScreen extends StatelessWidget {
     return Scaffold(
       backgroundColor: kPrimaryLightColor,
       appBar: AppBar(
+        automaticallyImplyLeading: false,
         toolbarHeight: 80,
         backgroundColor: kPrimaryColor,
         elevation: 0,

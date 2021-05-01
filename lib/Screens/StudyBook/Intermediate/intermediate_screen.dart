@@ -1,24 +1,16 @@
-//import 'dart:io';
-
-//import 'package:audioplayers/audioplayers.dart';
 import 'package:flutter/material.dart';
-import 'package:refineapp/Screens/Notebook/components/body.dart';
+import 'package:refineapp/Screens/StudyBook/Intermediate/components/body.dart';
 import 'package:refineapp/components/costum_bottom_nav_bar.dart';
 import 'package:refineapp/shared/constants.dart';
 
-import '../../enums.dart';
-//import 'package:path_provider/path_provider.dart';
+import 'package:refineapp/enums.dart';
 
-// import 'package:refineapp/Screens/Notebook/components/custom_button.dart';
-// import 'package:refineapp/Screens/Notebook/core/validators.dart';
-// import 'package:refineapp/shared/constants.dart';
-
-class NotebookScreen extends StatefulWidget {
+class IntermediateScreen extends StatefulWidget {
   @override
-  _NotebookScreenState createState() => _NotebookScreenState();
+  _IntermediateScreenState createState() => _IntermediateScreenState();
 }
 
-class _NotebookScreenState extends State<NotebookScreen> {
+class _IntermediateScreenState extends State<IntermediateScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -33,17 +25,16 @@ class _NotebookScreenState extends State<NotebookScreen> {
                 bottomLeft: Radius.circular(40),
                 bottomRight: Radius.circular(40))),
         title: Text(
-          'Notebook',
+          'Intermediate',
           style: TextStyle(
             fontSize: 26,
           ),
         ),
         centerTitle: true,
       ),
-      //-----------------
       body: Body(),
       bottomNavigationBar: CostumBottomNavBar(
-        selectedMenu: MenuState.notebook,
+        selectedMenu: MenuState.studybook,
       ),
     );
   }

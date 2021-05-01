@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:refineapp/Screens/StudyBook/Beginner/beginner_screen.dart';
+import 'package:refineapp/Screens/StudyBook/Intermediate/intermediate_screen.dart';
 import 'package:refineapp/Screens/StudyBook/components/levels_menu.dart';
 
 class Body extends StatelessWidget {
@@ -26,11 +27,15 @@ class Body extends StatelessWidget {
           LevelsMenu(
             icon: "assets/icons/plane.svg",
             text: "Intermediate ",
-            press: () {},
+            press: () {
+              Navigator.push(context, MaterialPageRoute(builder: (context) {
+                return IntermediateScreen();
+              }));
+            },
           ),
           LevelsMenu(
             icon: "assets/icons/rocket.svg",
-            text: "3.0. Advanced ",
+            text: "Advanced ",
             press: () {},
           ),
         ]));

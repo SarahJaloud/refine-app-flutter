@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:refineapp/Screens/Home/Motivation/motivation.dart';
 import 'package:refineapp/Screens/Home/components/header.dart';
+import 'package:refineapp/Screens/Notebook/notebook_screen.dart';
 //import 'package:refineapp/components/empty_container.dart';
 import 'package:refineapp/components/rounded_icon_container.dart';
 import 'package:refineapp/shared/constants.dart';
@@ -29,7 +30,11 @@ class Body extends StatelessWidget {
             color: Colors.white,
             text: "Reminder! You should add a new word into your notebook.",
             textColor: kPrimaryColor,
-            press: () {},
+            press: () {
+              Navigator.push(context, MaterialPageRoute(builder: (context) {
+                return NotebookScreen();
+              }));
+            },
           )
           //EmptyContainer(size: size),
         ],

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:refineapp/Screens/Home/home_screen.dart';
+import 'package:refineapp/Screens/Notebook/notebook_screen.dart';
 import 'package:refineapp/Screens/StudyBook/study_book_screen.dart';
 import 'package:refineapp/shared/constants.dart';
 import 'package:refineapp/enums.dart';
@@ -33,7 +34,11 @@ class CostumBottomNavBar extends StatelessWidget {
                       ? yellowColor
                       : inActiveIconColor,
                 ),
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.push(context, MaterialPageRoute(builder: (context) {
+                    return NotebookScreen();
+                  }));
+                },
               ),
               IconButton(
                 icon: SvgPicture.asset(
