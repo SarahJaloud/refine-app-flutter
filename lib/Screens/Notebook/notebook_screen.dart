@@ -5,7 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_audio_recorder/flutter_audio_recorder.dart';
 import 'package:path_provider/path_provider.dart';
 
-import 'package:refineapp/Screens/Notebook/components/cutom_button.dart';
+import 'package:refineapp/Screens/Notebook/components/custom_button.dart';
 import 'package:refineapp/Screens/Notebook/core/validators.dart';
 import 'package:refineapp/shared/constants.dart';
 
