@@ -3,7 +3,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_audio_recorder/flutter_audio_recorder.dart';
 import 'package:audioplayers/audioplayers.dart';
 import 'package:path_provider/path_provider.dart';
+import 'package:refineapp/Screens/Notebook/components/custom_button.dart';
 import 'package:refineapp/Screens/Notebook/core/validators.dart';
+import 'package:refineapp/shared/constants.dart';
 
 class Body extends StatefulWidget {
   @override
@@ -15,6 +17,8 @@ class _BodyState extends State<Body> {
 
   final TextEditingController _wordController = TextEditingController();
   final TextEditingController _definitionController = TextEditingController();
+  final AudioPlayer _audioPlayer = AudioPlayer();
+  FlutterAudioRecorder _audioRecorder;
 
   @override
   void initState() {
@@ -162,6 +166,129 @@ class _BodyState extends State<Body> {
                 //textAlign: TextAlign.left,
               ),
             ],
+          ),
+        ),
+        Padding(
+          padding: const EdgeInsets.all(15),
+          child: Card(
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(10),
+            ),
+            child: Container(
+              padding: const EdgeInsets.all(15),
+              child: Form(
+                key: _notebookFormKey,
+                autovalidateMode:
+                    _autoValidate ? AutovalidateMode.onUserInteraction : null,
+                child: Column(
+                  children: <Widget>[
+                    TextFormField(
+                      controller: _wordController,
+                      decoration: InputDecoration(
+                        labelText: "Word",
+                        border: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(
+                            10,
+                          ),
+                        ),
+                      ),
+                      validator: KValidators.validateWord,
+                    ),
+                    const SizedBox(height: 10),
+                    TextFormField(
+                      controller: _definitionController,
+                      decoration: InputDecoration(
+                        labelText: "Definition",
+                        border: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(
+                            10,
+                          ),
+                        ),
+                      ),
+                      validator: KValidators.validateDefinition,
+                    ),
+                    const SizedBox(height: 10),
+                    Column(
+                      children: <Widget>[
+                        Text(
+                          "Record your pronounciation\nof the word:",
+                          style: TextStyle(
+                            fontSize: 16,
+                          ),
+                          textAlign: TextAlign.center,
+                        ),
+                        Row(
+                          children: <Widget>[
+                            CustomIconButton(
+                              icon: Icons.mic_rounded,
+                              color: _isRecording ? Colors.red : kPrimaryColor,
+                              onPressed: () async {
+                                if (_isRecording) {
+                                  await _stopRecordAudio();
+                                  return;
+                                }
+
+                                await _startRecordAudio();
+                              },
+                            ),
+                            CustomIconButton(
+                              icon: _isPlaying
+                                  ? Icons.pause_rounded
+                                  : Icons.play_arrow_rounded,
+                              color: kPrimaryColor,
+                              onPressed: () async {
+                                if (_isPlaying) {
+                                  await _stopPronounciation();
+                                  return;
+                                }
+
+                                await _playPronounciation();
+                              },
+                            ),
+                            Expanded(
+                              child: StreamBuilder<Duration>(
+                                stream: _audioPlayer.onAudioPositionChanged,
+                                builder: (
+                                  BuildContext context,
+                                  AsyncSnapshot<Duration> snapshot,
+                                ) {
+                                  return LinearProgressIndicator(
+                                    value: snapshot.hasData
+                                        ? snapshot.data.inSeconds /
+                                            _noteAudioFileRecording
+                                                .duration.inSeconds
+                                        : 0,
+                                  );
+                                },
+                              ),
+                            ),
+                          ],
+                        ),
+                      ],
+                    ),
+                    const SizedBox(height: 15),
+                    ElevatedButton(
+                      onPressed: () async {
+                        await _saveNote();
+                      },
+                      style: ElevatedButton.styleFrom(
+                        primary: kPrimaryColor,
+                      ),
+                      child: Padding(
+                        padding: const EdgeInsets.all(15),
+                        child: Text(
+                          "Save",
+                          style: TextStyle(
+                            fontSize: 18,
+                            fontWeight: FontWeight.w500,
+                          ),
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ),
           ),
         ),
       ])),
