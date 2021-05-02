@@ -20,9 +20,7 @@ class Body extends StatelessWidget {
             CircularButton(
                 icon: "assets/icons/dictionary.svg",
                 text: "Vocabulary",
-                press: () {
-                  ;
-                }),
+                press: () {}),
             SizedBox(height: size.height * 0.05),
             Column(
               children: [
