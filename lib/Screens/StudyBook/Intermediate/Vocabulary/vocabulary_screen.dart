@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:refineapp/Screens/StudyBook/Beginner/beginner_screen.dart';
+import 'package:refineapp/Screens/StudyBook/Intermediate/intermediate_screen.dart';
 import 'package:refineapp/shared/constants.dart';
 //import 'package:flutter_svg/flutter_svg.dart';
 
-class VocabularyScreenB extends StatelessWidget {
+class VocabularyScreenI extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -19,7 +19,7 @@ class VocabularyScreenB extends StatelessWidget {
           leading: GestureDetector(
             onTap: () {
               Navigator.push(context, MaterialPageRoute(builder: (context) {
-                return BeginnerScreen();
+                return IntermediateScreen();
               }));
             },
             child: Icon(Icons.close),
@@ -41,7 +41,7 @@ class VocabularyScreenB extends StatelessWidget {
               child: Column(
                 children: [
                   Text(
-                    "Activities",
+                    "Jobs",
                     style: TextStyle(
                       color: Colors.white,
                       fontSize: 25,
@@ -53,9 +53,9 @@ class VocabularyScreenB extends StatelessWidget {
                   SizedBox(
                     height: 20,
                   ),
-                  Image.asset("assets/images/skate.png"),
+                  Image.asset("assets/images/vet.png"),
                   RoundedContainer(
-                    text: "Skating",
+                    text: "Vet",
                     textColor: kPrimaryColor,
                     color: yellowColor,
                   ),
@@ -67,37 +67,9 @@ class VocabularyScreenB extends StatelessWidget {
                       color: kPrimaryColor,
                     ),
                   ),
-                  Image.asset("assets/images/climb.png"),
+                  Image.asset("assets/images/pilot.png"),
                   RoundedContainer(
-                    text: "Climb",
-                    textColor: kPrimaryColor,
-                    color: yellowColor,
-                  ),
-                  Padding(
-                    padding: EdgeInsets.symmetric(horizontal: 50.0),
-                    child: Container(
-                      height: 1.0,
-                      width: 300.0,
-                      color: kPrimaryColor,
-                    ),
-                  ),
-                  Image.asset("assets/images/dive.png"),
-                  RoundedContainer(
-                    text: "Dive",
-                    textColor: kPrimaryColor,
-                    color: yellowColor,
-                  ),
-                  Padding(
-                    padding: EdgeInsets.symmetric(horizontal: 50.0),
-                    child: Container(
-                      height: 1.0,
-                      width: 300.0,
-                      color: kPrimaryColor,
-                    ),
-                  ),
-                  Image.asset("assets/images/fish.png"),
-                  RoundedContainer(
-                    text: "Fish",
+                    text: "Pilot",
                     textColor: kPrimaryColor,
                     color: yellowColor,
                   ),

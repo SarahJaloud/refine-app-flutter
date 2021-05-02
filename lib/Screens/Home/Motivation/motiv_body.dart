@@ -32,7 +32,6 @@ class Body extends StatelessWidget {
           ),
           Expanded(
             child: PageView.builder(
-              // Block swipe to next qn
               physics: PageScrollPhysics(),
               controller: _quoteController.pageController,
               itemCount: _quoteController.quotes.length,

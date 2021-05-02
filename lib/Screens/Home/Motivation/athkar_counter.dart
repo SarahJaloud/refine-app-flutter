@@ -40,7 +40,7 @@ class _AthkarCounterState extends State<AthkarCounter> {
                     "$athkarCounter",
                     style: TextStyle(
                         color: Colors.white,
-                        fontSize: 55,
+                        fontSize: 65,
                         fontWeight: FontWeight.bold),
                   )),
                 ),

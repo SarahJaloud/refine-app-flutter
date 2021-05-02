@@ -33,6 +33,8 @@ dependencies:
   # if you are using latest flutter please update your flutter_svg package to ^0.18.*
   flutter_svg: ^0.19.1 # help us to use SVG in our app
   provider: ^5.0.0 # for State management
+  audioplayers: ^0.16.1
+  path_provider: ^1.6.1
 
 
 dev_dependencies:

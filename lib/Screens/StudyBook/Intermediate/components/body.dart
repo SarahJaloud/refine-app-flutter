@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:refineapp/Screens/StudyBook/Beginner/Vocabulary/vocabulary_screen.dart';
 import 'package:refineapp/Screens/StudyBook/Beginner/components/circular_button.dart';
-//import 'package:refineapp/Screens/Home/home_screen.dart';
+import 'package:refineapp/Screens/StudyBook/Intermediate/Vocabulary/vocabulary_screen.dart';
 import 'package:refineapp/components/rounded_button.dart';
 import 'package:refineapp/shared/constants.dart';
 
@@ -22,7 +21,7 @@ class Body extends StatelessWidget {
                 text: "Vocabulary",
                 press: () {
                   Navigator.push(context, MaterialPageRoute(builder: (context) {
-                    return VocabularyScreenB();
+                    return VocabularyScreenI();
                   }));
                 }),
             SizedBox(height: size.height * 0.05),

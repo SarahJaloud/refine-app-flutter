@@ -104,7 +104,7 @@ class ProfileInfo extends StatelessWidget {
                   width: size.width * 0.04,
                 ),
                 Text(
-                  "Sarah",
+                  "User's name",
                   style: TextStyle(color: Colors.white, fontSize: 16),
                 )
                 //Text("${userr._name}")
@@ -127,7 +127,7 @@ class ProfileInfo extends StatelessWidget {
                   width: size.width * 0.04,
                 ),
                 Text(
-                  "sarah@refine.com",
+                  "name@refine.com",
                   style: TextStyle(color: Colors.white, fontSize: 16),
                 )
                 //Text("${userr._name}")

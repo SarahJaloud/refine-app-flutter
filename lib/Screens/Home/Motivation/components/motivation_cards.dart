@@ -14,7 +14,6 @@ class MotivationCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
-    //QuotesController _controller = Get.put(QuotesController());
     return Container(
       margin: EdgeInsets.symmetric(vertical: 50, horizontal: 23),
       padding: EdgeInsets.symmetric(vertical: 40, horizontal: 30),

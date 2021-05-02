@@ -35,8 +35,8 @@ class AuthService {
   }
 
   // sign up with email and password
-  // when calling function from different widgets the email and password are gonna be taken
-  // to create a new user from them
+  // when calling function from different widgets
+  // the email and password are gonna be taken to create a new user from them
   Future signUpWithEmailAndPassword(
       String _userEmail, String _userPassword, String _name) async {
     try {

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:refineapp/Screens/StudyBook/Beginner/Grammar/grammar_screen.dart';
 import 'package:refineapp/Screens/StudyBook/Beginner/Vocabulary/vocabulary_screen.dart';
 import 'package:refineapp/Screens/StudyBook/Beginner/components/circular_button.dart';
 //import 'package:refineapp/Screens/Home/home_screen.dart';
@@ -42,7 +43,11 @@ class Body extends StatelessWidget {
             CircularButton(
                 icon: "assets/icons/grammar.svg",
                 text: "Grammar",
-                press: () {}),
+                press: () {
+                  Navigator.push(context, MaterialPageRoute(builder: (context) {
+                    return GrammarScreen();
+                  }));
+                }),
             SizedBox(height: size.height * 0.05),
             Column(
               children: [
