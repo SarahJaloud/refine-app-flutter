@@ -45,9 +45,6 @@ class QuestionController extends GetxController
   int _numOfCorrectAns = 0;
   int get numOfCorrectAns => this._numOfCorrectAns;
 
-  String _decidedLevel = " ";
-  String get decidedLevel => this._decidedLevel;
-
   // called immediately after the widget is allocated memory
   @override
   void onInit() {
@@ -114,16 +111,5 @@ class QuestionController extends GetxController
 
   void updateTheQnNum(int index) {
     _questionNumber.value = index + 1;
-  }
-
-  void decider(String d) {
-    d = decidedLevel;
-    if (_numOfCorrectAns < 8) {
-      print('Your level is Beginner!');
-    } else if (8 < _numOfCorrectAns && _numOfCorrectAns < 16) {
-      print('Your level is Intermediate!');
-    } else if (16 < _numOfCorrectAns && _numOfCorrectAns < 24) {
-      print('Your level is Advanced!');
-    }
   }
 }

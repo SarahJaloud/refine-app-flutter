@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:refineapp/Screens/StudyBook/Beginner/Grammar/grammar_screen.dart';
 import 'package:refineapp/Screens/StudyBook/Beginner/Vocabulary/vocabulary_screen.dart';
 import 'package:refineapp/Screens/StudyBook/Beginner/components/circular_button.dart';
+import 'package:refineapp/Screens/StudyBook/Beginner/exercise/exercise_screen.dart';
 //import 'package:refineapp/Screens/Home/home_screen.dart';
 import 'package:refineapp/components/rounded_button.dart';
 import 'package:refineapp/shared/constants.dart';
@@ -67,7 +68,11 @@ class Body extends StatelessWidget {
               text: "TAKE EXERCISE",
               textColor: kPrimaryLightColor,
               color: pinkColor,
-              press: () {},
+              press: () {
+                Navigator.push(context, MaterialPageRoute(builder: (context) {
+                  return ExerciseScreen();
+                }));
+              },
             )
           ]),
     );

@@ -35,13 +35,7 @@ class ResultScreen extends StatelessWidget {
                     .copyWith(color: Colors.black),
               ),
               Spacer(flex: 3),
-              Text(
-                "${_qnController.decidedLevel}",
-                style: Theme.of(context)
-                    .textTheme
-                    .headline5
-                    .copyWith(color: Colors.white),
-              ),
+
               RoundedButton(
                 color: kPrimaryColor,
                 text: "GET STARTED",
